@@ -3,77 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emisora Renacer New Song</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Renacer New Song - Migración</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.5; padding: 1rem; background: #f5f5f5; color: #333; }
-    header { text-align: center; margin-bottom: 1rem; }
-    .logo { max-width: 150px; width: 50%; height: auto; margin: 0 auto 0.5rem; display: block; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .schedule { text-align: center; font-size: 1rem; margin-bottom: 1rem; color: #555; }
-    .faith-message { text-align: justify; font-size: 1rem; margin: 1rem 0; font-style: italic; color: #444; }
-    .center-message { text-align: center; margin-top: 1rem; }
-    .player-container { display: flex; justify-content: center; margin-bottom: 1rem; }
-    audio { width: 100%; max-width: 400px; }
-    p { text-align: center; font-size: 1rem; }
-    .announcements { border: 1px solid #ccc; background: #e8e8e8; padding: 0.5rem 1rem; margin-top: 1rem; }
-    .announcements h2 { text-align: center; margin-bottom: 0.5rem; font-size: 1.2rem; }
-    .announcements ul { list-style-type: disc; padding-left: 1.2rem; margin-bottom: 0.5rem; }
-    .now-playing { text-align: center; font-size: 1rem; margin-top: 0.5rem; color: #0066cc; }
-    .myplayer { border: 1px solid #ccc; background: #ffffff; padding: 0.5rem 1rem; margin-top: 1rem; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      padding: 1.5rem;
+    }
+
+    /* 🔥 LOGO CENTRADO */
+    .logo {
+      max-width: 260px;
+      width: 100%;
+      margin: 0 auto 0.3rem auto;
+      display: block;
+    }
+
+    /* 🔥 TITULO CENTRADO */
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1.3rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* 🔥 TEXTO JUSTIFICADO */
+    p, .important, .future {
+      text-align: justify;
+    }
+
+    .alert {
+      background: #fff3cd;
+      color: #856404;
+      padding: 0.8rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* 🔥 BLOQUE ACCEDE AQUÍ CENTRADO */
+    .link-box {
+      background: #e8f0fe;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0066cc;
+      word-break: break-all;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background: #0066cc;
+      color: #ffffff !important;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #004999;
+    }
+
+    .important {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .future {
+      margin-top: 1.2rem;
+      font-style: normal;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+    }
+
+    .android { fill: #3ddc84; }
+    .apple { fill: #000000; }
+
     @media (max-width: 480px) {
-      .logo { width: 70%; max-width: 120px; }
-      h1 { font-size: 1.25rem; }
-      .schedule, .faith-message, p { font-size: 0.9rem; }
+      .logo { max-width: 200px; }
+      h1 { font-size: 1.3rem; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="images/logo.jpg" alt="Logo Emisora Renacer New Song" class="logo" />
-    <h1>Emisora Renacer New Song</h1>
-    <div class="schedule">Transmitiendo de 8:00 AM a 12:00 PM</div>
-  </header>
+  <div class="container">
 
-<div class="myplayer">
-  <iframe 
-    src="https://a6.asurahosting.com/public/renacer_new_song/embed?theme=light"
-    width="100%" 
-    height="150" 
-    frameborder="0" 
-    allowtransparency="true" 
-    allow="autoplay">
-  </iframe>
-</div>
+    <img src="images/logo.png" alt="Logo Renacer New Song" class="logo" />
 
-  <section class="announcements">
-    <h2>Programación</h2>
-    <ul>
-      <li>Devocional "Hablemos con Dios" 9:00 am</li>
-      <li>Predica Pastor Hector 11:00 am</li>
-      <li>Predica Rolando Gonzalez 1:00 pm</li>
-      <li>Fuente de vida por medio de la Palabra 3:00 pm</li>
-      <li>Pide tu canción 4:00 pm - 6:00 pm</li>
-      <li>Predica Rolando Gonzalez 6:00 pm</li>
-      <li>Predica Pastor Hector Perez 8:30 pm</li>
-    </ul>
-  </section>
+    <h1>¡Nos Hemos Renovado!</h1>
 
+    <p>
+      La emisora <strong>Renacer New Song</strong> ahora se encuentra en una nueva plataforma que nos abre una nueva gama de posibilidades.
+      En un futuro contaremos con noticias y una red social propia.
+    </p>
 
-  <div class="center-message">
-    Que la música renueve tu espíritu y fortalezca tu fe cada día.
+    <div class="link-box">
+      Accede aquí:<br><br>
+
+      <a href="https://www.renacernewsong.com/" target="_blank">
+        https://www.renacernewsong.com/
+      </a>
+
+      <br>
+
+      <a href="https://www.renacernewsong.com/" target="_blank" class="button">
+        Ir a la nueva emisora
+      </a>
+    </div>
+
+    <div class="important">
+      Es muy importante que guardes y utilices el nuevo enlace para seguir disfrutando de nuestra programación.
+    </div>
+
+    <div class="future">
+      Para que nos escuches desde cualquier lugar.
+      <!-- Botón de descarga para Android -->
+      <div style="margin-top:0.8rem; text-align:center;">
+        <a href="https://play.google.com/store/apps/details?id=com.suarez.luis.renacer" target="_blank" class="button" style="display:inline-flex;align-items:center;gap:8px;">
+          <svg class="icon android" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20">
+            <path d="M17.6 9.48l1.84-3.18c.16-.28.06-.64-.22-.8-.28-.16-.64-.06-.8.22l-1.88 3.25A10.94 10.94 0 0012 8c-1.58 0-3.08.33-4.42.97L5.7 5.72c-.16-.28-.52-.38-.8-.22-.28.16-.38.52-.22.8l1.84 3.18A10.97 10.97 0 002 18h20c0-3.53-1.66-6.69-4.4-8.52z"/>
+          </svg>
+          Descargar en Google Play
+        </a>
+      </div>
+    </div>
+
+    <div class="alert">
+      ⚠️ Este sitio dejará de funcionar el 15 de abril
+    </div>
+
   </div>
-
-  <div class="faith-message">
-    <strong>Misión:</strong> Expandir el evangelio y dar a conocer a Jesucristo a toda criatura a través de una programación que transmita valores cristianos y un ambiente acogedor. Además de sensibilizar al público en la comunicación local, regional, nacional e internacional a través de un ministerio radial cristiano creíble.
-  </div>
-
-  <div class="faith-message">
-    <strong>Visión:</strong> Ser una emisora Cristiana que acompañe a la iglesia en el cumplimiento de la misión de expandir el evangelio y dar a conocer a Jesucristo a toda criatura. Además de establecer obras que trabajen con las familias fortaleciendo la consejería familiar Cristiana.
-  </div>
-
-  <p>¡Gracias por acompañarnos en este tiempo de alabanza y esperanza!</p>
-
 </body>
 </html>
